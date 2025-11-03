@@ -62,7 +62,7 @@
         }
 
         public object Clone() => new ComplexNumber(this.re, this.im);
-        public override int GetHashCode() => base.GetHashCode();
+        public override int GetHashCode() => HashCode.Combine(re, im);
         public override string ToString() => $"{re} + {im}i";
     }
 }
